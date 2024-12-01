@@ -1,0 +1,17 @@
+    <div className="card" style={{ width: '18rem', margin: '1rem' }}>
+      <img
+        src={ `http://127.0.0.1:8000/${product.image}`}
+        className="card-img-top"
+        alt={product.name}/>
+      <div className="card-body">
+        <h5 className="card-title">{product.name}</h5>
+        <p className="card-text">Price: ${product.price}</p>
+        { admin && (
+          <p className="card-text">Stock: {product.stock}</p>
+        )}
+        
+        <button className='btn btn-primary' onClick={()=> handleAddToCart()}
+        >add to cart</button>        
+      </div>
+
+    </div>
